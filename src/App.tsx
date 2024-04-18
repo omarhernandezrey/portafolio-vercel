@@ -1,13 +1,19 @@
-import Nav from './components/Nav'; // Asegúrate de importar el componente Nav
+// src/App.tsx
+import React from 'react';
+import ParticlesBackground from '../src/components/ParticlesBackground'; 
 import './App.css';
+import Nav from './components/Nav';
+import About from './pages/About';
 
 const App = () => {
   return (
     <div className="App">
+      <ParticlesBackground />
       <Nav />
-      {/* Otros componentes de tu portafolio irán aquí */}
+      <About />
+      
     </div>
   );
-}
+};
 
 export default App;

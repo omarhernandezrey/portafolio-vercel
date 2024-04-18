@@ -1,25 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
+    "target": "ES2020",                       // Usa las características de ECMAScript 2020
+    "useDefineForClassFields": true,          // Asegura un comportamiento consistente para campos de clase
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // Bibliotecas de tipo para usar en el proyecto
+    "module": "ESNext",                       // Usa el sistema de módulos más moderno disponible
+    "skipLibCheck": true,                     // Omite la verificación de tipos para todas las declaraciones en los archivos .d.ts
 
-    /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
+    /* Resolución de módulos */
+    "moduleResolution": "node",               // Modo de resolución de módulos, 'node' es típico para proyectos de Node.js y para uso con bundlers como Webpack o Vite
+    "resolveJsonModule": true,                // Permite la importación de archivos JSON
+    "isolatedModules": true,                  // Asegura que cada archivo pueda ser transpilado de manera independiente
+    "noEmit": true,                           // No emite archivos de salida (útil cuando se usa con un bundler que maneja la transpilación)
 
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    /* Configuración de JSX */
+    "jsx": "react-jsx",                       // Transforma JSX en llamadas de creación de elementos como se especifica en React 17+
+
+    /* Opciones estrictas de linting y chequeo de tipos */
+    "strict": true,                           // Habilita todas las opciones estrictas de chequeo de tipo
+    "noUnusedLocals": true,                   // Informa de errores en locales no utilizados
+    "noUnusedParameters": true,               // Informa de errores en parámetros de funciones no utilizados
+    "noFallthroughCasesInSwitch": true        // Previene caídas inadvertidas en cases de switch
+
+    /* Opciones adicionales podrían incluirse aquí según las necesidades del proyecto */
   },
-  "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src"],                         // Los archivos a incluir en el proceso de compilación están dentro de la carpeta 'src'
+  "references": [{ "path": "./tsconfig.node.json" }]  // Referencias a otros archivos tsconfig que podrían estar especificando opciones para otras partes del proyecto, como configuraciones para el backend
 }

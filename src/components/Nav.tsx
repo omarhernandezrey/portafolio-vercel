@@ -18,17 +18,18 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="bg-blue-900 text-white p-4 relative">
+    <nav className="bg-black text-white p-4 relative">
       <div className="container mx-auto flex justify-between items-center">
-        <a href="#" className="text-2xl font-bold">Portafolio</a>
-        
+        {/* Imagen PNG en lugar del enlace de texto "Portafolio" */}
+        <img src="/public/images/logo.png" alt="Portafolio" className="h-10 p-" />
+
         {/* Botón de menú para móviles */}
         <button className="md:hidden text-xl" onClick={() => setIsOpen(!isOpen)}>
           <span>☰</span>
         </button>
-        
+
         {/* Menú desplegable móvil */}
-        <div className={`absolute right-0 top-full bg-blue-900 shadow-lg transition-all duration-500 ease-in ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} overflow-hidden md:opacity-100`}
+        <div className={`absolute right-0 top-full bg-black shadow-lg transition-all duration-500 ease-in ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'} overflow-hidden md:opacity-100`}
              style={{ width: 'auto', height: isOpen ? 'calc(100vh - 4rem)' : '0' }}>
           {[
             { name: 'Home', href: '#home', icon: <AiOutlineHome /> },
