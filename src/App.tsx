@@ -1,5 +1,4 @@
 // src/App.tsx
-import React from 'react';
 import ParticlesBackground from '../src/components/ParticlesBackground'; 
 import './App.css';
 import Nav from './components/Nav';
