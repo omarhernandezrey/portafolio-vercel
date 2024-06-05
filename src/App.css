@@ -1,11 +1,13 @@
 body {
   background-color: rgb(15, 13, 13);
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
 }
 
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 1rem;
   text-align: center;
 }
 

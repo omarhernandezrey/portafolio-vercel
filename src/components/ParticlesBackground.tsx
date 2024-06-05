@@ -4,9 +4,23 @@ import { useEffect } from 'react'; // Add the missing import statement
 
 declare global {
     interface Window {
-        particlesJS: (id: string, config: any) => void; // Declare the particlesJS property on the Window interface
+        particlesJS: (id: string, config: ParticlesConfig) => void; // Specify the type for the config parameter
     }
 }
+
+// Define the type for the particlesConfig
+type ParticlesConfig = {
+    // Add the properties of the particlesConfig object
+    // Example properties:
+    particles: {
+        number: {
+            value: number;
+        };
+        size: {
+            value: number;
+        };
+    };
+};
 
 const ParticlesBackground = () => {
     useEffect(() => {
